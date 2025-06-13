@@ -52,7 +52,7 @@ class IntegratorBase(abc.ABC):
             h = t[n + 1] - t[n]
             y[n + 1] = self.compute_step(f, t[n], y[n], h)
 
-        return y
+        return 2*y
 
 
 class EulerIntegrator(IntegratorBase):
