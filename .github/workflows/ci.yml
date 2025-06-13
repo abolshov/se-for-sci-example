@@ -17,6 +17,10 @@ jobs:
         name: Run tests
         runs-on: ubuntu-latest
         steps: 
+            - name: Checkout repo
+              uses: actions/checkout@v4
+            - name: Set up python
+              uses: actions/setup-python@v5
             - name: Install package
               run: pip install .[test]
             - name: Run pytest
